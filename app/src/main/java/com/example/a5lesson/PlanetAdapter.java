@@ -12,13 +12,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.ViewHolder> {
+public class PlanetAdapter extends RecyclerView.Adapter<PlanetAdapter.ViewHolder> {
 
-    private final List<Animal> animals;
+    private final List<Planet> planets;
     private final LayoutInflater inflater;
 
-    public AnimalAdapter(List<Animal> animals, Context context) {
-        this.animals = animals;
+    public PlanetAdapter(List<Planet> planets, Context context) {
+        this.planets = planets;
         this.inflater = LayoutInflater.from(context);
     }
 
@@ -31,26 +31,26 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-    Animal animal = animals.get(position);
-    holder.animalView.setImageResource(animal.getAnimalRes());
-    holder.nameView.setText(animal.getName());
-    holder.animalDescriptionView.setText(animal.getAnimalDescription());
+    Planet planet = planets.get(position);
+    holder.planetView.setImageResource(planet.getPlanetRes());
+    holder.nameView.setText(planet.getName());
+    holder.planetDescriptionView.setText(planet.getPlanetDescription());
     }
 
     @Override
     public int getItemCount() {
-        return animals.size();
+        return planets.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        final ImageView animalView;
-        final TextView nameView, animalDescriptionView;
+        final ImageView planetView;
+        final TextView nameView, planetDescriptionView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            animalView = itemView.findViewById(R.id.imageView);
+            planetView = itemView.findViewById(R.id.imageView);
             nameView = itemView.findViewById(R.id.name);
-            animalDescriptionView = itemView.findViewById(R.id.desc);
+            planetDescriptionView = itemView.findViewById(R.id.desc);
         }
     }
 

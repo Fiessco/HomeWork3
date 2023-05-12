@@ -4,37 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/forest_background"
+    android:background="@drawable/back"
     tools:context=".SecondActivity">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="257dp"
-        android:layout_height="35dp"
+        android:layout_width="356dp"
+        android:layout_height="38dp"
         android:layout_marginTop="52dp"
         android:background="@drawable/shape_txt"
         android:gravity="center"
-        android:text="Картотека животных"
-        android:textColor="#FBDDC2"
+        android:text="Планеты солнечной системы"
+        android:textColor="#00F9FF"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.347"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.008" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.recyclerview.widget.RecyclerView
 
         android:id="@+id/RSV"
-        android:layout_width="370dp"
-        android:layout_height="560dp"
+        android:layout_width="396dp"
+        android:layout_height="565dp"
         android:layout_marginTop="22dp"
-        tools:listitem="@layout/list_item"
         android:background="@drawable/shape_items"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:listitem="@layout/list_item" />
 </androidx.constraintlayout.widget.ConstraintLayout>
